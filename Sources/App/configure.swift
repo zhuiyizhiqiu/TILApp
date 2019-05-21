@@ -27,7 +27,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     // Configure a database
     var databases = DatabasesConfig()
     let databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost", username: "vapor",
-                                                  database: "vaporpassword", password: "password")
+                                                  database: "vapor", password: "password")
     let database = PostgreSQLDatabase(config: databaseConfig)
     databases.add(database: database, as: .psql)
     services.register(databases)
